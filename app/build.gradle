@@ -1,0 +1,101 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'org.jetbrains.kotlin.android.extensions'
+apply plugin: 'com.google.gms.google-services'
+android {
+  compileSdkVersion 28
+  defaultConfig {
+    applicationId "com.arturdziombek.coffeecounter"
+    minSdkVersion 21
+    targetSdkVersion 28
+    versionCode 2
+    versionName "1.1"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+dependencies {
+  implementation fileTree(include: ['*.jar'], dir: 'libs')
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  testImplementation 'junit:junit:4.12'
+  testImplementation "org.mockito:mockito-core:2.21.0"
+  androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+  androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+  testImplementation "com.nhaarman.mockitokotlin2:mockito-kotlin:2.0.0-RC1"
+  testImplementation "android.arch.core:core-testing:1.1.1"
+
+  implementation 'androidx.appcompat:appcompat:1.0.0-rc01'
+  implementation 'androidx.cardview:cardview:1.0.0-rc01'
+  testImplementation 'junit:junit:4.12'
+  implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
+  //    implementation "com.mindorks:placeholderview:$placeHolderView"
+  implementation 'androidx.recyclerview:recyclerview:1.0.0-rc01'
+  implementation 'com.google.android.material:material:1.0.0-rc01'
+
+
+  //lifedata
+  implementation 'androidx.lifecycle:lifecycle-runtime:2.0.0-rc01'
+  implementation 'androidx.lifecycle:lifecycle-extensions:2.0.0-rc01'
+  kapt 'androidx.lifecycle:lifecycle-compiler:2.0.0-rc01'
+
+
+  implementation "org.kodein.di:kodein-di-generic-jvm:$kodeinVersion"
+  implementation "org.kodein.di:kodein-di-framework-android-x:$kodeinVersion"
+
+  //dagger
+  kapt 'com.google.dagger:dagger-compiler:2.15'
+  implementation 'com.google.dagger:dagger-android:2.15'
+  kapt 'com.google.dagger:dagger-android-processor:2.15'
+  implementation 'com.google.dagger:dagger-android-support:2.15'
+
+  implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  implementation "com.squareup.retrofit2:adapter-rxjava2:$rxjavaAdapter"
+  implementation "com.squareup.okhttp3:okhttp:$okHttpVersion"
+  implementation "com.squareup.okhttp3:logging-interceptor:$okHttpVersion"
+
+  //rx
+  implementation "io.reactivex.rxjava2:rxjava:$rxJava"
+  implementation "io.reactivex.rxjava2:rxandroid:$rxAndroid"
+  implementation "io.reactivex.rxjava2:rxkotlin:$rxKotlin"
+  implementation "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
+  //rxActivityOnResult
+  implementation "com.github.VictorAlbertos:RxActivityResult:$rxActivityOnResult"
+  //rxPermission
+  implementation "com.tbruyelle.rxpermissions2:rxpermissions:$rxPermissions"
+  //rxBinding
+  implementation "com.jakewharton.rxbinding2:rxbinding:$rxBinding"
+
+  //glide
+  implementation "com.github.bumptech.glide:glide:$glideVersion"
+  kapt "com.github.bumptech.glide:compiler:$glideVersion"
+
+  //utils
+  implementation "com.ashokvarma.android:bottom-navigation-bar:2.0.4"
+  implementation 'com.afollestad.material-dialogs:commons:0.9.6.0'
+
+
+  implementation "com.jakewharton.threetenabp:threetenabp:$dateLib"
+  implementation "org.jetbrains.anko:anko-commons:$ankoVersion"
+  implementation 'com.google.android.material:material:1.0.0-beta01'
+  implementation 'android.arch.navigation:navigation-fragment:1.0.0-alpha03'
+  implementation 'android.arch.navigation:navigation-ui-ktx:1.0.0-alpha03'
+  implementation "com.afollestad.material-dialogs:core:$materialDialogsVersion"
+
+  //room
+  implementation "androidx.room:room-runtime:2.0.0-rc01"
+  kapt "androidx.room:room-compiler:2.0.0-rc01"
+  implementation "androidx.room:room-rxjava2:2.0.0-rc01"
+
+
+
+  implementation 'com.google.firebase:firebase-dynamic-links:16.1.1'
+}

@@ -1,0 +1,18 @@
+<resources>
+  <string name="app_name">LejMnieKawe</string>
+
+  <!-- LOGIN -->
+  <string name="login.password">Password</string>
+  <string name="login.login">Login</string>
+  <string name="login.createAccount">No account yet? Create one</string>
+
+  <!-- SIGN UP -->
+  <string name="signup.password">Password</string>
+  <string name="signup.email">Email</string>
+  <string name="signup.login">Already have an account? Login</string>
+  <string name="signup.register">Register account</string>
+  <!--MAIN -->
+  <string name="main.coffee">Coffee</string>
+
+
+</resources>
