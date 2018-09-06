@@ -14,4 +14,5 @@ abstract class UseCaseModule {
 
   @Binds
   abstract fun provideMainUseCsae(useCase: MainUseCaseImpl): MainUseCase
+
 }
