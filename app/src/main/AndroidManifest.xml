@@ -29,7 +29,7 @@
         <data android:host="lejmniekawetu.page.link" android:scheme="https"/>
       </intent-filter>
     </activity>
-    <activity android:name=".ui.signup.SignupActivity"></activity>
+    <activity android:name=".ui.signup.SignupActivity"/>
 
 
     <receiver android:name="CoffeeCounterWidgetProvider" >
